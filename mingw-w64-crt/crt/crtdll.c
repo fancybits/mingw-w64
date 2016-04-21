@@ -153,7 +153,7 @@ DllMainCRTStartup (HANDLE hDllHandle, DWORD dwReason, LPVOID lpreserved)
   if (dwReason == DLL_PROCESS_ATTACH)
     {
       __security_init_cookie ();
-#ifdef __x86_64__
+#if defined(__x86_64__) && 0
       __mingw_init_ehandler ();
 #endif
     }

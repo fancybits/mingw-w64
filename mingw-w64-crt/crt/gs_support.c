@@ -104,7 +104,7 @@ __declspec(noreturn) void __cdecl
 __report_gsfailure (ULONG_PTR StackCookie)
 {
   volatile UINT_PTR cookie[2] __MINGW_ATTRIB_UNUSED;
-#if defined(_WIN64) && !defined(__aarch64__)
+#if defined(_WIN64) && !defined(__aarch64__) && 0
   ULONG64 controlPC, imgBase, establisherFrame;
   PRUNTIME_FUNCTION fctEntry;
   PVOID hndData;
